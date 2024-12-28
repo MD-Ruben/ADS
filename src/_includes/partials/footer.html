@@ -1,7 +1,12 @@
-<div class="bg-gray-900 text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 px-12">
+<div class="bg-adsblue text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 px-12">
 	<div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 text-center lg:text-left py-24">
 		<div>
-			<div class="text-white opacity-50 text-4xl font-display">{{ settings.site_name }}</div>				
+			<div class="text-white opacity-50 text-4xl font-display"><!-- logo -->
+				{% if settings.logo %}
+						<img src="{{ settings.logo }}" class="h-20 w-64 object-contain object-center" />
+				{% else %}
+						{{ settings.site_name }}
+				{% endif %}</div>				
 		</div>
 		<div>
 			<div class="font-display text-white uppercase text-sm tracking-widest mb-6">{{ footer.section_one_title }}</div>

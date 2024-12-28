@@ -1,13 +1,12 @@
 ---
-title: This is my third & latest post
-description: Bring to the table win-win survival strategies to ensure proactive
-  domination. At the end of the day, going forward, a new normal that has
-  evolved from generation X is on the runway heading towards a streamlined cloud
-  solution.
-image: https://images.unsplash.com/photo-1501631259223-89d4e246ed23?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1960&q=80
+title: "Des experts à votre service."
+description: >
+  Que ce soit pour assurer votre maison, votre voiture ou pour une protection santé, nos experts sont à votre écoute pour vous proposer une couverture adaptée à vos besoins. Remplissez notre formulaire pour obtenir votre devis gratuit et personnalisé en quelques minutes.
+image: "/static/img/partenariat.jpg"
 date: 2020-09-23T15:13:13.021Z
-category: Forest Trails
+category: "Forest Trails"
 ---
+
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 

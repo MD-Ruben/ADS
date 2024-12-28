@@ -1,26 +1,25 @@
----
-section_one_title: More info
+section_one_title: Plus d'infos
 section_one_links:
-  - text: About
+  - text: À propos
     url: "#"
-  - text: Info
+  - text: Informations
     url: "#"
   - text: FAQ
     url: "#"
-section_two_title: Helpful Links
+section_two_title: Liens utiles
 section_two_links:
-  - text: About
+  - text: À propos
     url: "#"
-  - text: Info
+  - text: Informations
     url: "#"
   - text: FAQ
     url: "#"
-section_three_title: Find out more
+section_three_title: En savoir plus
 section_three_links:
-  - text: About
+  - text: À propos
     url: "#"
-  - text: Info
+  - text: Informations
     url: "#"
   - text: FAQ
     url: "#"
-copyright: ©2021 DESIGN BY NOVOLIO. IMAGES BY UNSPLASH
+copyright: ©2024 DESIGN PAR African Digit Consulting.

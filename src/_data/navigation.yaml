@@ -1,10 +1,9 @@
----
 items:
-  - text: Home
+  - text: Accueil
     url: "/"
-  - text: About
+  - text: À propos
     url: "/pages/about-us"
-  - text: Blog
+  - text: Nos solutions et expertises sectorielles
     url: "/blog"
   - text: Contact
     url: "/contact"
