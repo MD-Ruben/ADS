@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notre groupe</title>
+  
+  <!-- Meta description -->
+  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@100;200;300;400;500;600;700&family=Overpass:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-sans text-gray-700 antialiased bg-white">
+
+  <!-- Navbar -->
+  <div class="h-24 z-50 relative container mx-auto px-6 grid grid-cols-3">
+
+    <!-- Menu Button and Overlay -->
+    <div x-data="{ showMenu: false }" class="flex items-center">
+      <button x-on:click="showMenu = true">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Mobile Menu -->
+      <div x-show="showMenu" class="fixed inset-0 w-full h-full bg-white z-50 text-adsblue">
+        <div class="container h-full mx-auto px-6 py-8 relative z-10 flex flex-col items-center justify-center text-2xl uppercase font-bold tracking-widest space-y-6">
+          <button x-on:click="showMenu = false" class="absolute top-0 left-0 mt-8 ml-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </button>
+          <a href="/" class="inline-block border-b-4 border-transparent hover:border-blue-900">Accueil</a>
+          <a href="/pages/about-us" class="inline-block border-b-4 border-transparent hover:border-blue-900">À propos</a>
+          <a href="/blog" class="inline-block border-b-4 border-transparent hover:border-blue-900">Menu</a>
+          <a href="/contact" class="inline-block border-b-4 border-transparent hover:border-blue-900">Contact</a>
+        </div>
+        <div class="absolute inset-0 w-full h-full bg-adsblue bg-opacity-20"></div>
+      </div>
+    </div>
+
+    <!-- Logo -->
+    <div class="flex items-center justify-center">
+      <a href="/" class="text-white uppercase font-bold text-2xl tracking-widest">
+        <img src="/static/img/logo-blanc.png" class="h-20 w-64 object-contain object-center" alt="Logo ADS">
+      </a>
+    </div>
+
+    <!-- Contact Button -->
+    <div class="flex items-center justify-end">
+      <a href="/contact">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Background Overlay for Navbar -->
+  <div class="w-full h-24 bg-adsblue bg-opacity-95 absolute top-0 left-0"></div>
+
+  <!-- Section "Notre groupe" -->
+  <div class="text-center py-12 px-6 mt-12">
+    <h1 class="font-display font-bold text-5xl mb-6">Notre groupe</h1>
+    <p class="max-w-lg mx-auto">
+      
+    </p>
+  </div>
+
+  <!-- Content Section (à compléter) -->
+  <div class="container mx-auto px-6 py-12">
+    <section class="bg-white">
+      <div class="flex flex-wrap flex-row justify-center items-center gap-12">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <!-- Left Section: Image -->
+          <div class="bg-white p-12 md:p-24 flex justify-start items-center">
+            <a href="/blog/my-third-big-post/">
+              <img src="/static/img/partenariat.jpg" class="w-full max-w-md" alt="Image d'illustration">
+            </a>
+          </div>
+        
+          <!-- Right Section: Text and Button -->
+          <div class="md:order-first bg-gray-100 p-12 md:p-24 flex justify-end items-center">
+            <div class="max-w-md">
+              <div class="w-24 h-2 bg-adsblue mb-4"></div>
+              <h2 class="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-6 text-red-500">Qui sommes nous ?</h2>
+              <p class="font-light text-gray-600 text-sm md:text-base mb-6 leading-relaxed">
+                Fondée en 2018, nous nous distinguons par notre équipe dynamique, multiculturelle et passionnée de l’Assurance.
+
+Spécialisés dans la protection des PME, Grandes Entreprise mais aussi dans le Conseil en Assurances au Grand Publics, nous sommes fiers de notre capacité à anticiper les risques et à proposer des solutions innovantes.
+
+Notre collaboration étroite avec des maisons d’Assurance renommées et des partenaires stratégiques garantit que nos clients bénéficient des meilleurs produits et services du marché partout en Côte d’Ivoire.
+
+Chez ADS ASSURANCES CONSEILS nous ne sommes pas simplement des courtiers en assurance, nous sommes vos conseillers en sécurité financière, travaillant main dans la main avec vous pour assurer la prospérité à long terme de votre entreprise et biens.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      <div class="flex flex-wrap flex-row justify-center items-center gap-12">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <!-- Left Section: Image -->
+          <div class="bg-white p-12 md:p-24 flex justify-start items-center">
+            <a href="/blog/my-third-big-post/">
+              <img src="/static/img/office.jpg" class="w-full max-w-md" alt="Image d'illustration">
+            </a>
+          </div>
+        
+          <!-- Right Section: Text and Button -->
+          <div class="md:order-first bg-gray-100 p-12 md:p-24 flex justify-end items-center text-right">
+            <div class="max-w-md">
+              <div class="w-24 h-2 bg-adsblue mb-4"></div>
+              <h2 class="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-6 text-red-500">Notre vision
+               <br> Notre mission
+               <br> Nos valeurs</h2>
+              <p class="font-light text-gray-600 text-sm md:text-base mb-6 leading-relaxed">
+                <p>Être le courtier conseil en assurance de référence pour les PME dans la sous-région.</p>
+
+<p>ADS assurances conseils aide les PME à choisir des solutions adaptées à leurs besoins pour une sécurité financière assurée.</p>
+
+<p>Nous nous engageons à défendre des valeurs telles que :</p>
+
+<p><strong>PROFESSIONNALISME</strong><br>
+Jeunes et motivés, notre savoir fait la différence.</p>
+
+<p><strong>PASSION</strong><br>
+Plus qu’un métier, notre seul but vous satisfaire.</p>
+
+<p><strong>ESPRIT D’ÉQUIPE</strong><br>
+Chez nous, chaque idée compte et nous permet de grandir avec vous.</p>
+
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- Section with Full Background Image -->
+      <div class="relative w-full py-12 px-12">
+        <!-- Ajout d'un overlay noir -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        
+        <div class="relative z-10 text-center py-12 md:py-24">
+          <h1 class="text-white text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-6">
+            Pourquoi nous choisir ?
+          </h1>
+          <p class="text-white mb-10 text-base md:text-lg font-bold">
+            Nous sommes des facilitateurs de croissance, des défenseurs de la stabilité financière, et des partenaires dévoués à la prospérité à long terme de nos clients. En faisant équipe avec nous, vous bénéficiez de l'expertise d'une équipe qui navigue avec agilité dans le paysage complexe de l'assurance en Afrique, anticipant les évolutions du marché pour vous offrir des solutions innovantes et des conseils éclairés.<br>
+
+            Notre approche centrale sur le client garantit une collaboration étroite pour cerner vos besoins spécifiques, assurant ainsi que chaque police d'assurance est une réponse sur mesure aux défis qui vous sont posés. <br>
+
+            En nous concevant, vous optez pour une équipe dédiée, guidée par des valeurs profondes, travaillant sans relâche pour comprendre les nuances uniques de votre entreprise
+          </p>
+          <a href="/categories/notre-groupe/" class="inline-block bg-adsblue text-white uppercase text-sm tracking-widest font-heading px-8 py-4">
+            Découvrez nos offres
+          </a>
+        </div>
+        <img src="/static/img/Home_ADS2.jpg" class="w-full h-full absolute inset-0 object-cover -z-10" alt="Image en fond">
+      </div>
+    </section>
+  </div>
+  
+  
+
+  <!-- Footer Section -->
+  <div class="bg-adsblue text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 px-12">
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 text-center lg:text-left py-24">
+
+      <!-- Footer Column 1: Logo -->
+      <div>
+        <div class="text-white opacity-50 text-4xl font-display">
+          <img src="/static/img/logo-blanc.png" class="h-20 w-64 object-contain object-center" alt="Logo ADS">
+        </div>
+      </div>
+
+      <!-- Footer Column 2: Plus d'infos -->
+      <div>
+        <div class="font-display text-white uppercase text-sm tracking-widest mb-6">Plus d'infos</div>
+        <a href="#" class="block mb-4">À propos</a>
+        <a href="#" class="block mb-4">Informations</a>
+        <a href="#" class="block mb-4">FAQ</a>
+      </div>
+
+      <!-- Footer Column 3: Liens utiles -->
+      <div>
+        <div class="font-display text-white uppercase text-sm tracking-widest mb-6">Liens utiles</div>
+        <a href="#" class="block mb-4">À propos</a>
+        <a href="#" class="block mb-4">Informations</a>
+        <a href="#" class="block mb-4">FAQ</a>
+      </div>
+
+      <!-- Footer Column 4: En savoir plus -->
+      <div>
+        <div class="font-display text-white uppercase text-sm tracking-widest mb-6">En savoir plus</div>
+        <a href="#" class="block mb-4">À propos</a>
+        <a href="#" class="block mb-4">Informations</a>
+        <a href="#" class="block mb-4">FAQ</a>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="text-sm lg:text-base text-center font-heading font-light tracking-widest uppercase text-white opacity-75 pb-24">©2024 DESIGN PAR African Digit Consulting.</div>
+  </div>
+
+  <!-- JS Scripts -->
+  <script src="/static/js/alpine.js"></script>
+
+</body>
+</html>

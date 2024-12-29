@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>À propos de ADS Assurances Conseils</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@100;200;300;400;500;600;700&family=Overpass:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-sans text-gray-700 antialiased bg-white">
+    <!-- Navigation -->
+    <div class="h-24 z-50 relative container mx-auto px-6 grid grid-cols-3">
+      <!-- Menu Button -->
+      <div x-data="{showMenu: false}" class="flex items-center">
+        <button x-on:click="showMenu = true">
+          <svg
+            class="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+        <!-- Mobile Menu -->
+        <div
+          x-show="showMenu"
+          class="fixed inset-0 w-full h-full bg-white z-50 text-adsblue"
+        >
+          <div
+            class="container h-full mx-auto px-6 py-8 relative z-10 flex flex-col items-center justify-center text-2xl uppercase font-bold tracking-widest space-y-6"
+          >
+            <button
+              x-on:click="showMenu = false"
+              class="absolute top-0 left-0 mt-8 ml-6"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </button>
+            <a
+              href="/"
+              class="inline-block border-b-4 border-transparent hover:border-blue-900"
+              >Accueil</a
+            >
+            <a
+              href="/pages/about-us"
+              class="inline-block border-b-4 border-transparent hover:border-blue-900"
+              >À propos</a
+            >
+            <a
+              href="/blog"
+              class="inline-block border-b-4 border-transparent hover:border-blue-900"
+              >Blog</a
+            >
+            <a
+              href="/contact"
+              class="inline-block border-b-4 border-transparent hover:border-blue-900"
+              >Contact</a
+            >
+          </div>
+          <div
+            class="absolute inset-0 w-full h-full bg-adsblue bg-opacity-20"
+          ></div>
+        </div>
+      </div>
+      <!-- Logo -->
+      <div class="flex items-center justify-center">
+        <a
+          href="/"
+          class="text-white uppercase font-bold text-2xl tracking-widest"
+        >
+          <img
+            src="/static/img/logo-blanc.png"
+            class="h-20 w-64 object-contain object-center"
+          />
+        </a>
+      </div>
+      <!-- Contact Button -->
+      <div class="flex items-center justify-end">
+        <a href="/contact">
+          <svg
+            class="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div
+      class="w-full h-24 bg-adsblue bg-opacity-95 absolute top-0 left-0"
+    ></div>
+
+    <!-- Hero Section -->
+    <div class="relative h-[60vh] bg-adsblue overflow-hidden">
+      <img
+        src="/static/img/Home_ADS.jpg"
+        alt="ADS Assurances"
+        class="absolute inset-0 w-full h-full object-cover opacity-25"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-adsblue/95 to-adsblue/75"
+      ></div>
+      <div
+        class="relative h-full flex flex-col items-center justify-center text-white px-6"
+      >
+        <h1
+          class="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 text-center max-w-5xl"
+        >
+          À propos de ADS Assurances Conseils
+        </h1>
+        <p
+          class="max-w-2xl mx-auto text-xl md:text-2xl text-center font-light leading-relaxed"
+        >
+          Votre partenaire de confiance en assurance depuis 2018, dédié à la
+          protection et au succès de votre entreprise.
+        </p>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 max-w-6xl">
+      <!-- Notre Histoire - Style amélioré -->
+      <div class="relative py-16 sm:py-24">
+        <div
+          class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8"
+        >
+          <div class="relative sm:py-16 lg:py-0">
+            <div
+              class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0"
+            >
+              <div class="relative overflow-hidden rounded-2xl">
+                <img
+                  src="/static/img/partenariat.jpg"
+                  alt="Notre équipe"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0"
+          >
+            <div class="pt-12 sm:pt-16 lg:pt-20">
+              <h2
+                class="text-3xl font-bold tracking-tight text-adsblue sm:text-4xl"
+              >
+                Notre Histoire
+              </h2>
+              <div class="mt-6 space-y-6 text-gray-600">
+                <p class="text-lg">
+                  ADS Assurances Conseils est une société de courtage en
+                  assurance à capitaux 100% ivoirien, agréée depuis 2018.
+                </p>
+                <p class="text-base leading-7">
+                  Notre équipe est composée de jeunes experts-conseils
+                  chevronnés et indépendants en assurance, dédiés à défendre au
+                  mieux les intérêts des PME PMI et Institutions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vision et Mission - Style cards amélioré -->
+      <div class="bg-gray-50 py-16 sm:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div
+              class="relative overflow-hidden rounded-lg bg-white shadow-lg transition-all hover:shadow-xl"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-adsblue/5 to-transparent"
+              ></div>
+              <div class="relative p-8">
+                <div class="aspect-[3/2] overflow-hidden rounded-lg bg-gray-50">
+                  <div class="h-full w-full object-cover">
+                    <div
+                      class="flex h-full items-center justify-center bg-adsblue/10"
+                    >
+                      <svg
+                        class="h-12 w-12 text-adsblue"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                        ></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-8 text-xl font-medium text-adsblue">
+                  Notre Vision
+                </h3>
+                <p class="mt-4 text-base text-gray-600">
+                  Être l'Assureur Conseils de référence des PME PMI pour
+                  soutenir leur croissance et leur succès.
+                </p>
+              </div>
+            </div>
+
+            <!-- Carte Mission - même structure que Vision -->
+            <div
+              class="relative overflow-hidden rounded-lg bg-white shadow-lg transition-all hover:shadow-xl"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-adsblue/5 to-transparent"
+              ></div>
+              <div class="relative p-8">
+                <div class="aspect-[3/2] overflow-hidden rounded-lg bg-gray-50">
+                  <div class="h-full w-full object-cover">
+                    <div
+                      class="flex h-full items-center justify-center bg-adsblue/10"
+                    >
+                      <svg
+                        class="h-12 w-12 text-adsblue"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-8 text-xl font-medium text-adsblue">
+                  Notre Mission
+                </h3>
+                <p class="mt-4 text-base text-gray-600">
+                  Accompagner chaque PME PMI à mieux se protéger via des
+                  solutions en assurances adaptées.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services - Style grille moderne -->
+      <div class="py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2
+              class="text-3xl font-bold tracking-tight text-adsblue sm:text-4xl"
+            >
+              Nos Services
+            </h2>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              Des solutions complètes pour répondre à tous vos besoins en
+              assurance
+            </p>
+          </div>
+          <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+            <dl
+              class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4"
+            >
+              <!-- Répéter pour chaque service -->
+              <div class="flex flex-col">
+                <dt
+                  class="flex items-center gap-x-3 text-base font-semibold leading-7 text-adsblue"
+                >
+                  <div
+                    class="h-10 w-10 flex items-center justify-center rounded-lg bg-adsblue/10"
+                  >
+                    <svg
+                      class="h-12 w-12 text-adsblue"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                      ></path>
+                    </svg>
+                  </div>
+                  Audit et Prévention
+                </dt>
+                <dd
+                  class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600"
+                >
+                  <p class="flex-auto">
+                    Audit des contrats d'assurance et prévention des risques
+                    professionnels
+                  </p>
+                </dd>
+              </div>
+              <!-- ... autres services ... -->
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expertise Sectorielle -->
+      <div class="py-12 border-t border-gray-100">
+        <h2 class="text-3xl font-display text-adsblue text-center mb-8">
+          Notre Expertise Sectorielle
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            <h3 class="text-lg font-bold text-adsblue mb-2">
+              Institutions Financières
+            </h3>
+            <p class="text-sm text-gray-600">
+              Solutions spécialisées pour le secteur financier
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            <h3 class="text-lg font-bold text-adsblue mb-2">
+              Industrie Minière
+            </h3>
+            <p class="text-sm text-gray-600">
+              Couverture complète pour le secteur minier
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            <h3 class="text-lg font-bold text-adsblue mb-2">
+              BTP & Construction
+            </h3>
+            <p class="text-sm text-gray-600">
+              Protection adaptée aux chantiers et constructions
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            <h3 class="text-lg font-bold text-adsblue mb-2">
+              Logistique & Transport
+            </h3>
+            <p class="text-sm text-gray-600">
+              Solutions pour la chaîne logistique
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            <h3 class="text-lg font-bold text-adsblue mb-2">Agroalimentaire</h3>
+            <p class="text-sm text-gray-600">
+              Couverture pour l'industrie agroalimentaire
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            <h3 class="text-lg font-bold text-adsblue mb-2">Manufacture</h3>
+            <p class="text-sm text-gray-600">
+              Solutions pour le secteur manufacturier
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pourquoi Nous Choisir -->
+      <div class="py-12 border-t border-gray-100">
+        <h2 class="text-3xl font-display text-adsblue text-center mb-8">
+          Pourquoi Nous Choisir ?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-6">
+            <div class="flex items-start space-x-3">
+              <div
+                class="w-10 h-10 bg-adsblue/10 rounded-full flex items-center justify-center flex-shrink-0"
+              >
+                <svg
+                  class="w-5 h-5 text-adsblue"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-adsblue mb-1">
+                  Réseau Privilégié
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Collaboration étroite avec des assureurs et institutions
+                  financières de premier plan
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div
+                class="w-10 h-10 bg-adsblue/10 rounded-full flex items-center justify-center flex-shrink-0"
+              >
+                <svg
+                  class="w-5 h-5 text-adsblue"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-adsblue mb-1">
+                  Solutions Innovantes
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Offres personnalisées adaptées à vos besoins spécifiques
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div
+                class="w-10 h-10 bg-adsblue/10 rounded-full flex items-center justify-center flex-shrink-0"
+              >
+                <svg
+                  class="w-5 h-5 text-adsblue"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-adsblue mb-1">
+                  Réactivité Maximale
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Service flexible et réactif pour une gestion optimale de vos
+                  besoins
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="/static/img/partenariat.jpg"
+              alt="Partenariat ADS"
+              class="w-full h-[300px] object-cover rounded-lg shadow-lg"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-adsblue/20 to-transparent rounded-lg"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="py-12 border-t border-gray-100">
+        <h2 class="text-3xl font-display text-adsblue text-center mb-8">
+          Contactez-nous
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-50"
+          >
+            <div
+              class="w-10 h-10 bg-adsblue/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-5 h-5 text-adsblue"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-adsblue mb-2">Localisation</h3>
+            <p class="text-sm text-gray-600">Angré 22ème arrondissement</p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-50"
+          >
+            <div
+              class="w-10 h-10 bg-adsblue/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-5 h-5 text-adsblue"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-adsblue mb-2">Téléphone</h3>
+            <p class="text-sm text-gray-600">27 22468062 / 07670909 06</p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-50"
+          >
+            <div
+              class="w-10 h-10 bg-adsblue/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-5 h-5 text-adsblue"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-adsblue mb-2">Site Web</h3>
+            <p class="text-sm text-gray-600">www.adsassurances.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div
+      class="bg-adsblue text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 px-12"
+    >
+      <div
+        class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 text-center lg:text-left py-24"
+      >
+        <div>
+          <div class="text-white opacity-50 text-4xl font-display">
+            <img
+              src="/static/img/logo-blanc.png"
+              class="h-20 w-64 object-contain object-center"
+            />
+          </div>
+        </div>
+        <div>
+          <div
+            class="font-display text-white uppercase text-sm tracking-widest mb-6"
+          >
+            Plus d'infos
+          </div>
+          <a href="#" class="block mb-4">À propos</a>
+          <a href="#" class="block mb-4">Informations</a>
+          <a href="#" class="block mb-4">FAQ</a>
+        </div>
+        <div>
+          <div
+            class="font-display text-white uppercase text-sm tracking-widest mb-6"
+          >
+            Liens utiles
+          </div>
+          <a href="#" class="block mb-4">À propos</a>
+          <a href="#" class="block mb-4">Informations</a>
+          <a href="#" class="block mb-4">FAQ</a>
+        </div>
+        <div>
+          <div
+            class="font-display text-white uppercase text-sm tracking-widest mb-6"
+          >
+            En savoir plus
+          </div>
+          <a href="#" class="block mb-4">À propos</a>
+          <a href="#" class="block mb-4">Informations</a>
+          <a href="#" class="block mb-4">FAQ</a>
+        </div>
+      </div>
+      <div
+        class="text-sm lg:text-base text-center font-heading font-light tracking-widest uppercase text-white opacity-75 pb-24"
+      >
+        ©2024 DESIGN PAR African Digit Consulting.
+      </div>
+    </div>
+
+    <script src="/static/js/alpine.js"></script>
+  </body>
+</html>

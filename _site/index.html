@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ADS</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@100;200;300;400;500;600;700&family=Overpass:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="font-sans text-gray-700 antialiased bg-white">
+    <!-- Navbar -->
+    <div class="h-24 z-50 relative container mx-auto px-6 grid grid-cols-3">
+      <!-- Menu Button and Overlay -->
+      <div x-data="{ showMenu: false }" class="flex items-center">
+        <button x-on:click="showMenu = true">
+          <svg
+            class="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div
+          x-show="showMenu"
+          class="fixed inset-0 w-full h-full bg-white z-50 text-adsblue"
+        >
+          <div
+            class="container h-full mx-auto px-6 py-8 relative z-10 flex flex-col items-center justify-center text-2xl uppercase font-bold tracking-widest space-y-6"
+          >
+            <button
+              x-on:click="showMenu = false"
+              class="absolute top-0 left-0 mt-8 ml-6"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </button>
+            <a
+              href="/"
+              class="inline-block border-b-4 border-transparent hover:border-blue-900"
+              >Accueil</a
+            >
+            <a
+              href="/categories/notre-groupe/"
+              class="inline-block border-b-4 border-transparent hover:border-blue-900"
+              >À propos</a
+            >
+            <a
+              href="/blog"
+              class="inline-block border-b-4 border-transparent hover:border-blue-900"
+              >Menu</a
+            >
+            <a
+              href="/contact"
+              class="inline-block border-b-4 border-transparent hover:border-blue-900"
+              >Contact</a
+            >
+          </div>
+          <div
+            class="absolute inset-0 w-full h-full bg-adsblue bg-opacity-20"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Logo -->
+      <div class="flex items-center justify-center">
+        <a
+          href="/"
+          class="text-white uppercase font-bold text-2xl tracking-widest"
+        >
+          <img
+            src="/static/img/logo-blanc.png"
+            class="h-20 w-64 object-contain object-center"
+            alt="Logo ADS"
+          />
+        </a>
+      </div>
+
+      <!-- Contact Button -->
+      <div class="flex items-center justify-end">
+        <a href="/contact">
+          <svg
+            class="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Background Overlay for Navbar -->
+    <div
+      class="w-full h-24 bg-adsblue bg-opacity-95 absolute top-0 left-0"
+    ></div>
+
+    <!-- Hero Section -->
+    <div class="-mt-24 relative w-full py-12 px-12 bg-yellow-900">
+      <div class="relative z-10 text-center py-24 md:py-48">
+        <h1
+          class="text-white text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-12"
+        >
+          La référence du courtage et conseils en assurance
+        </h1>
+        <a
+          href="/blog"
+          class="inline-block bg-adsblue text-white uppercase text-sm tracking-widest font-heading px-8 py-4"
+          >Déclarer un sinistre</a
+        >
+      </div>
+
+      <!-- Links Section -->
+      <div
+        class="relative z-10 mx-auto max-w-4xl flex justify-between uppercase text-white font-heading tracking-widest text-sm"
+      >
+        <a
+          href="/categories/notre-groupe/"
+          class="border-b border-white hover:text-adsblue hover:bg-white rounded-lg transition-all duration-300 ease-in-out p-5 hover:shadow-lg"
+          >En savoir plus</a
+        >
+        <a
+          href="/contact"
+          class="border-b border-white hover:text-adsblue hover:bg-white rounded-lg transition-all duration-300 ease-in-out p-5 hover:shadow-lg"
+          >Nous contacter</a
+        >
+      </div>
+
+      <!-- Hero Background Image -->
+      <img
+        src="/static/img/ads-home.jpg"
+        class="w-full h-full absolute inset-0 object-cover opacity-70"
+        alt="Hero Background Image"
+      />
+    </div>
+
+    <!-- Expert Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2">
+      <div class="bg-white p-12 md:p-24 flex justify-end items-center">
+        <a href="/blog/this-is-latest-post/">
+          <img
+            src="/static/img/partenariat.jpg"
+            class="w-full max-w-md"
+            alt="Partenariat"
+          />
+        </a>
+      </div>
+
+      <div class="bg-gray-100 p-12 md:p-24 flex justify-start items-center">
+        <div class="max-w-md">
+          <div class="w-24 h-2 bg-adsblue mb-4"></div>
+          <h2
+            class="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-6"
+          >
+            Des experts à votre service.
+          </h2>
+          <p
+            class="font-light text-gray-600 text-sm md:text-base mb-6 leading-relaxed"
+          >
+            Que ce soit pour assurer votre maison, votre voiture ou pour une
+            protection santé, nos experts sont à votre écoute pour vous proposer
+            une couverture adaptée à vos besoins. Remplissez notre formulaire
+            pour obtenir votre devis gratuit et personnalisé en quelques
+            minutes.
+          </p>
+          <a
+            href="/blog/this-is-latest-post/"
+            class="inline-block border-2 border-black font-light text-black hover:text-white hover:border-adsblue text-sm uppercase tracking-widest py-3 px-8 hover:bg-adsblue hover:text-white"
+            >Demander un devis</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Full-Width Image Section -->
+    <img
+      src="/static/img/Home_ADS.jpg"
+      class="w-full h-screen object-cover"
+      alt="Full Screen Image"
+    />
+
+    <!-- Additional Info Section -->
+    <div class="max-w-xl mx-auto text-center py-24 md:py-32">
+      <div class="w-24 h-2 bg-adsblue mb-4 mx-auto"></div>
+      <h2 class="font-display font-bold text-3xl md:text-4xl lg:text-5xl mb-6">
+        Votre tranquillité d'esprit, notre priorité
+      </h2>
+      <p class="font-light text-gray-600 mb-6 leading-relaxed">
+        Nos solutions d'assurance sont conçues pour protéger ce qui compte le
+        plus pour vous. De l'habitation à l'assurance auto, nous avons une
+        couverture adaptée à chaque étape de votre vie.
+      </p>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="flex flex-wrap bg-adsblue">
+      <a
+        href="/categories/notre-groupe/"
+        class="bg-black relative w-full md:w-auto md:flex-1 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75"
+      >
+        <div class="relative z-10">Notre groupe</div>
+        <img
+          src="/static/img/partenariat.jpg"
+          class="absolute inset-0 w-full h-full object-cover opacity-50"
+          alt="Notre groupe"
+        />
+      </a>
+      <a
+        href="/categories/nos-solutions-et-expertises/"
+        class="bg-black relative w-full md:w-auto md:flex-1 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75"
+      >
+        <div class="relative z-10">
+          Nos solutions et expertises sectorielles
+        </div>
+        <img
+          src="/static/img/guichet unique.jpeg"
+          class="absolute inset-0 w-full h-full object-cover opacity-50"
+          alt="Nos solutions et expertises"
+        />
+      </a>
+      <a
+        href="/categories/articles-actualités/"
+        class="bg-black relative w-full md:w-auto md:flex-1 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75"
+      >
+        <div class="relative z-10">Articles et actualités</div>
+        <img
+          src="/static/img/swiper3.jpg"
+          class="absolute inset-0 w-full h-full object-cover opacity-50"
+          alt="Articles et actualités"
+        />
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2">
+      <!-- Left Section: Image -->
+      <div class="bg-white p-12 md:p-24 flex justify-start items-center">
+        <a href="/blog/my-third-big-post/">
+          <img
+            src="/static/img/office.jpg"
+            class="w-full max-w-md"
+            alt="Image d'illustration"
+          />
+        </a>
+      </div>
+
+      <!-- Right Section: Text and Button -->
+      <div
+        class="md:order-first bg-gray-100 p-12 md:p-24 flex justify-end items-center"
+      >
+        <div class="max-w-md">
+          <div class="w-24 h-2 bg-adsblue mb-4"></div>
+          <h2
+            class="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-6"
+          >
+            Nos chiffres clés
+          </h2>
+          <p
+            class="font-light text-gray-600 text-sm md:text-base mb-6 leading-relaxed"
+          >
+            Découvrez nos performances et nos chiffres clés dans le secteur de
+            l'assurance. Avec plusieurs bureaux et une équipe dédiée, nous
+            figurons parmi les meilleurs courtiers de Côte d'Ivoire.
+          </p>
+          <a
+            href="/categories/notre-groupe/index.html"
+            class="inline-block border-2 border-adsblue font-light text-black text-sm uppercase tracking-widest py-3 px-8 hover:bg-adsblue hover:text-white"
+            >En savoir plus</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Section with Full Background Image -->
+    <div
+      class="relative w-full min-h-[600px] py-12 px-12 bg-cover bg-center bg-no-repeat flex items-center justify-center"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('/static/img/Home_ADS2.jpg');
+        background-position: center;
+        background-size: cover;
+      "
+    >
+      <!-- Contenu -->
+      <div class="relative text-center max-w-6xl mx-auto">
+        <h1
+          class="text-white text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-6"
+        >
+          Des solutions personnalisées pour chaque situation
+        </h1>
+        <br />
+        <p class="text-white mb-10 text-base md:text-lg font-bold">
+          Que vous soyez un particulier, une entreprise ou une profession
+          libérale, <br />
+          nos experts vous conseillent et vous accompagnent pour trouver les
+          solutions d'assurance <br />
+          les plus adaptées à vos besoins.
+        </p>
+        <a
+          href="/categories/notre-groupe/"
+          class="inline-block bg-adsblue text-white uppercase text-sm tracking-widest font-heading px-8 py-4"
+        >
+          Découvrez nos offres
+        </a>
+      </div>
+    </div>
+
+    <section class="w-full bg-gray-500 py-8 md:py-12">
+      <div class="container mx-auto px-4 md:px-6">
+        <h2
+          class="text-center font-heading uppercase tracking-widest text-xl mb-8"
+        >
+          Ils nous font confiance
+        </h2>
+        <div class="flex flex-wrap justify-center items-center">
+          <img
+            src="/static/img/axacotedivoire_logo.jpeg"
+            alt="Logo AXA Côte d'Ivoire"
+          />
+          <img src="/static/img/nsialogo.png" alt="Logo NSIA" />
+          <img
+            src="/static/img/allianz-insurance-logo.png"
+            alt="Logo Allianz"
+          />
+          <img src="/static/img/Infobip.png" alt="Logo Infobip" />
+          <img src="/static/img/leadwaylogo.png" alt="Logo Leadway" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div
+      class="bg-adsblue text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 px-12"
+    >
+      <div
+        class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 text-center lg:text-left py-24"
+      >
+        <!-- Footer Column 1: Logo -->
+        <div>
+          <div class="text-white opacity-50 text-4xl font-display">
+            <img
+              src="/static/img/logo-blanc.png"
+              class="h-20 w-64 object-contain object-center"
+              alt="Logo ADS"
+            />
+          </div>
+        </div>
+
+        <!-- Footer Column 2: Plus d'infos -->
+        <div>
+          <div
+            class="font-display text-white uppercase text-sm tracking-widest mb-6"
+          >
+            Plus d'infos
+          </div>
+          <a href="#" class="block mb-4">À propos</a>
+          <a href="#" class="block mb-4">Informations</a>
+          <a href="#" class="block mb-4">FAQ</a>
+        </div>
+
+        <!-- Footer Column 3: Liens utiles -->
+        <div>
+          <div
+            class="font-display text-white uppercase text-sm tracking-widest mb-6"
+          >
+            Liens utiles
+          </div>
+          <a href="#" class="block mb-4">À propos</a>
+          <a href="#" class="block mb-4">Informations</a>
+          <a href="#" class="block mb-4">FAQ</a>
+        </div>
+
+        <!-- Footer Column 4: En savoir plus -->
+        <div>
+          <div
+            class="font-display text-white uppercase text-sm tracking-widest mb-6"
+          >
+            En savoir plus
+          </div>
+          <a href="#" class="block mb-4">À propos</a>
+          <a href="#" class="block mb-4">Informations</a>
+          <a href="#" class="block mb-4">FAQ</a>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div
+        class="text-sm lg:text-base text-center font-heading font-light tracking-widest uppercase text-white opacity-75 pb-24"
+      >
+        ©2024 DESIGN PAR African Digit Consulting.
+      </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="/static/js/alpine.js"></script>
+  </body>
+</html>

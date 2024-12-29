@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Meta information -->
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ADS</title>
+
+  <!-- Fonts and CSS -->
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@100;200;300;400;500;600;700&family=Overpass:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-sans text-gray-700 antialiased bg-white">
+
+  <!-- Navbar Section -->
+  <div class="h-24 z-50 relative container mx-auto px-6 grid grid-cols-3">
+    <div x-data="{showMenu: false}" class="flex items-center">
+      <!-- Menu Button -->
+      <button x-on:click="showMenu = true">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Mobile Menu -->
+      <div x-show="showMenu" class="fixed inset-0 w-full h-full bg-white z-50 text-adsblue">
+        <div class="container h-full mx-auto px-6 py-8 relative z-10 flex flex-col items-center justify-center text-2xl uppercase font-bold tracking-widest space-y-6">
+          <button x-on:click="showMenu = false" class="absolute top-0 left-0 mt-8 ml-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </button>
+          <a href="/" class="inline-block border-b-4 border-transparent hover:border-blue-900">Accueil</a>
+          <a href="/pages/about-us" class="inline-block border-b-4 border-transparent hover:border-blue-900">À propos</a>
+          <a href="/blog" class="inline-block border-b-4 border-transparent hover:border-blue-900">Menu</a>
+          <a href="/contact" class="inline-block border-b-4 border-transparent hover:border-blue-900">Contact</a>
+        </div>
+        <div class="absolute inset-0 w-full h-full bg-adsblue bg-opacity-20"></div>
+      </div>
+    </div>
+
+    <!-- Logo -->
+    <div class="flex items-center justify-center">
+      <a href="/" class="text-white uppercase font-bold text-2xl tracking-widest">
+        <img src="/static/img/logo-blanc.png" class="h-20 w-64 object-contain object-center">
+      </a>
+    </div>
+
+    <!-- Contact Button -->
+    <div class="flex items-center justify-end">
+      <a href="/contact">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Background Color Bar -->
+  <div class="w-full h-24 bg-adsblue bg-opacity-95 absolute top-0 left-0"></div>
+
+  <!-- Main Blog Section -->
+  <div class="text-center py-12 px-6 mt-12">
+    <h1 class="font-display font-bold text-5xl mb-6">Menu</h1>
+    <p class="max-w-lg mx-auto"></p>
+  </div>
+
+  <!-- Blog Posts Section -->
+  <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 pt-12 pb-24">
+    <!-- Blog Post 1 -->
+    <div>
+      <a href="/blog/this-is-latest-post/">
+        <img src="/static/img/partenariat.jpg" class="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover">
+      </a>
+      <div class="bg-gray-50 p-8">
+        <div class="text-xs text-gray-600 uppercase font-semibold"></div>
+        <h2 class="mt-3 text-3xl mb-6 font-display text-black leading-tight max-w-sm">Des experts à votre service.</h2>
+        <p class="mt-4 max-w-md">Que ce soit pour assurer votre maison, votre voiture ou pour une protection santé, nos experts sont à votre écoute pour vous proposer une couverture adaptée à vos besoins.</p>
+        <a href="/categories/nos-solutions-et-expertises/index.html" class="flex items-center mt-6 uppercase text-sm text-black font-semibold">En savoir plus
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Blog Post 2 -->
+    <div>
+      <a href="/blog/my-third-big-post/">
+        <img src="/static/img/office.jpg" class="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover">
+      </a>
+      <div class="bg-gray-50 p-8">
+        <div class="text-xs text-gray-600 uppercase font-semibold"></div>
+        <h2 class="mt-3 text-3xl mb-6 font-display text-black leading-tight max-w-sm">Nos chiffres clés</h2>
+        <p class="mt-4 max-w-md">Découvrez nos performances et nos chiffres clés dans le secteur de l'assurance.</p>
+        <a href="/categories/notre-groupe/index.html" class="flex items-center mt-6 uppercase text-sm text-black font-semibold">En savoir plus
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Blog Post 3 -->
+    <div>
+      <a href="/blog/my-first-post/">
+        <img src="/static/img/ADS-home.jpg" class="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover">
+      </a>
+      <div class="bg-gray-50 p-8">
+        <div class="text-xs text-gray-600 uppercase font-semibold"></div>
+        <h2 class="mt-3 text-3xl mb-6 font-display text-black leading-tight max-w-sm">Articles et actualités</h2>
+        <p class="mt-4 max-w-md">Decouvrez nos actualités.</p>
+        <a href="/categories/articles-actualités/index.html" class="flex items-center mt-6 uppercase text-sm text-black font-semibold">En savoir plus
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="bg-adsblue text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 px-12">
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 text-center lg:text-left py-24">
+      <!-- Footer Column 1: Logo -->
+      <div>
+        <div class="text-white opacity-50 text-4xl font-display">
+          <img src="/static/img/logo-blanc.png" class="h-20 w-64 object-contain object-center">
+        </div>
+      </div>
+
+      <!-- Footer Column 2: More Info -->
+      <div>
+        <div class="font-display text-white uppercase text-sm tracking-widest mb-6">Plus d'infos</div>
+        <a href="#" class="block mb-4">À propos</a>
+        <a href="#" class="block mb-4">Informations</a>
+        <a href="#" class="block mb-4">FAQ</a>
+      </div>
+
+      <!-- Footer Column 3: Useful Links -->
+      <div>
+        <div class="font-display text-white uppercase text-sm tracking-widest mb-6">Liens utiles</div>
+        <a href="#" class="block mb-4">À propos</a>
+        <a href="#" class="block mb-4">Informations</a>
+        <a href="#" class="block mb-4">FAQ</a>
+      </div>
+
+      <!-- Footer Column 4: Learn More -->
+      <div>
+        <div class="font-display text-white uppercase text-sm tracking-widest mb-6">En savoir plus</div>
+        <a href="#" class="block mb-4">À propos</a>
+        <a href="#" class="block mb-4">Informations</a>
+        <a href="#" class="block mb-4">FAQ</a>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="text-sm lg:text-base text-center font-heading font-light tracking-widest uppercase text-white opacity-75 pb-24">©2024 DESIGN PAR African Digit Consulting.</div>
+  </div>
+
+  <!-- Alpine.js Script -->
+  <script src="/static/js/alpine.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta information -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nos solutions et expertises sectorielles</title>
+    <meta
+      name="description"
+      content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    />
+
+    <!-- Fonts and CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@100;200;300;400;500;600;700&family=Overpass:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="font-sans text-gray-700 antialiased bg-white">
+    <!-- Navbar Section -->
+    <div class="h-24 z-50 relative container mx-auto px-6 grid grid-cols-3">
+      <div x-data="{showMenu: false}" class="flex items-center">
+        <!-- Menu Button -->
+        <button x-on:click="showMenu = true">
+          <svg
+            class="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div
+          x-show="showMenu"
+          class="fixed inset-0 w-full h-full bg-white z-50 text-adsblue"
+        >
+          <div
+            class="container h-full mx-auto px-6 py-8 relative z-10 flex flex-col items-center justify-center text-2xl uppercase font-bold tracking-widest space-y-6"
+          >
+            <button
+              x-on:click="showMenu = false"
+              class="absolute top-0 left-0 mt-8 ml-6"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </button>
+            <a
+              href="/"
+              class="inline-block border-b-4 border-transparent hover:border-blue-900"
+              >Accueil</a
+            >
+            <a
+              href="/pages/about-us"
+              class="inline-block border-b-4 border-transparent hover:border-blue-900"
+              >À propos</a
+            >
+            <a
+              href="/blog"
+              class="inline-block border-b-4 border-transparent hover:border-blue-900"
+              >Menu</a
+            >
+            <a
+              href="/contact"
+              class="inline-block border-b-4 border-transparent hover:border-blue-900"
+              >Contact</a
+            >
+          </div>
+          <div
+            class="absolute inset-0 w-full h-full bg-adsblue bg-opacity-20"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Logo -->
+      <div class="flex items-center justify-center">
+        <a
+          href="/"
+          class="text-white uppercase font-bold text-2xl tracking-widest"
+        >
+          <img
+            src="/static/img/logo-blanc.png"
+            class="h-20 w-64 object-contain object-center"
+          />
+        </a>
+      </div>
+
+      <!-- Contact Button -->
+      <div class="flex items-center justify-end">
+        <a href="/contact">
+          <svg
+            class="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Background Color Bar -->
+    <div
+      class="w-full h-24 bg-adsblue bg-opacity-95 absolute top-0 left-0"
+    ></div>
+
+    <!-- Main Section: Nos Solutions -->
+    <div class="text-center py-12 px-6 mt-12">
+      <h1 class="font-display font-bold text-5xl mb-6">
+        Nos solutions et expertises sectorielles
+      </h1>
+      <p class="max-w-lg mx-auto">
+        Découvrez nos solutions d’assurance conçues spécifiquement pour divers
+        secteurs d’activité.
+      </p>
+    </div>
+
+    <!-- Solutions and Expertise Section -->
+    <div
+      class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 pt-12 pb-24"
+    >
+      <!-- Article 1: Gestion des Risques PME/PMI -->
+      <div x-data="{ open: false }">
+        <a href="#" @click.prevent="open = !open">
+          <img
+            src="/static/img/industry.jpg"
+            class="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover"
+          />
+        </a>
+        <div class="bg-gray-50 p-8">
+          <div class="text-xs text-gray-600 uppercase font-semibold">
+            Gestion des Risques
+          </div>
+          <h2
+            class="mt-3 text-3xl mb-6 font-display text-adsblue leading-tight max-w-sm"
+          >
+            La Gestion des Risques pour les PME/PMI
+          </h2>
+          <p class="mt-4 max-w-md">
+            Chez ADS Assurances Conseils, nous aidons les PME/PMI à sécuriser
+            leurs opérations face aux risques complexes et variés de leurs
+            secteurs (industrie minière, BTP, logistique, services financiers,
+            etc.).
+          </p>
+          <button
+            @click="open = !open"
+            class="flex items-center mt-6 uppercase text-sm text-black font-semibold"
+          >
+            <span x-text="open ? 'Voir moins' : 'En savoir plus'"></span>
+            <svg
+              class="w-4 h-4 ml-2 transform transition-transform duration-200"
+              :class="{'rotate-180': open}"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Contenu détaillé -->
+          <div x-show="open" x-transition class="mt-6 border-t pt-6">
+            <h3 class="font-bold text-xl mb-4">Points clés :</h3>
+            <ul class="list-disc pl-5 space-y-3">
+              <li>
+                <strong>Protection Globale</strong> : De l'assurance des biens
+                et des personnes à la couverture des risques environnementaux et
+                politiques.
+              </li>
+              <li>
+                <strong>Expertise Sectorielle</strong> : Contrats d'assurance
+                conçus pour répondre aux besoins spécifiques de votre secteur.
+              </li>
+              <li>
+                <strong>Assistance Complète en Sinistre</strong> :
+                Accompagnement dans la gestion rapide des indemnisations.
+              </li>
+            </ul>
+
+            <h3 class="font-bold text-xl mt-6 mb-4">
+              Nos services comprennent :
+            </h3>
+            <ul class="list-disc pl-5 space-y-3">
+              <li>Conseil et Intermédiation</li>
+              <li>Audit des Contrats d'Assurance</li>
+              <li>Gestion des Polices d'Assurance</li>
+              <li>Assistance Sinistre</li>
+            </ul>
+
+            <div class="mt-6 bg-adsblue bg-opacity-10 p-4 rounded-lg">
+              <p class="text-adsblue font-semibold">
+                Contactez ADS Assurances Conseils pour des solutions qui
+                protègent votre entreprise et renforcent sa résilience face aux
+                risques majeurs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 2: Impact Conflits Moyen-Orient -->
+      <div x-data="{ open: false }">
+        <a href="#" @click.prevent="open = !open">
+          <img
+            src="/static/img/mine.jpg"
+            class="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover"
+          />
+        </a>
+        <div class="bg-gray-50 p-8">
+          <div class="text-xs text-gray-600 uppercase font-semibold">
+            Assurance Maritime
+          </div>
+          <h2
+            class="mt-3 text-3xl mb-6 font-display text-black leading-tight max-w-sm"
+          >
+            L'Impact des Conflits sur l'Assurance Maritime
+          </h2>
+          <p class="mt-4 max-w-md">
+            Les tensions en mer Rouge affectent significativement le transport
+            maritime mondial. Face à la multiplication des attaques, les primes
+            d'assurance augmentent et les coûts logistiques s'alourdissent.
+          </p>
+          <button
+            @click="open = !open"
+            class="flex items-center mt-6 uppercase text-sm text-black font-semibold"
+          >
+            <span x-text="open ? 'Voir moins' : 'En savoir plus'"></span>
+            <svg
+              class="w-4 h-4 ml-2 transform transition-transform duration-200"
+              :class="{'rotate-180': open}"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Contenu détaillé -->
+          <div x-show="open" x-transition class="mt-6 border-t pt-6">
+            <h3 class="font-bold text-xl mb-4">Impacts majeurs :</h3>
+            <ul class="list-disc pl-5 space-y-3">
+              <li>
+                <strong>Augmentation des primes d'assurance</strong> : Hausse
+                considérable pour couvrir les risques de guerre
+              </li>
+              <li>
+                <strong>Coûts logistiques accrus</strong> : Primes
+                supplémentaires de milliers de dollars par voyage
+              </li>
+              <li>
+                <strong>Perturbations commerciales</strong> : Impact sur la
+                fluidité des échanges internationaux
+              </li>
+            </ul>
+
+            <div class="mt-6 bg-adsblue bg-opacity-10 p-4 rounded-lg">
+              <p class="text-adsblue font-semibold">
+                ADS Assurances Conseils vous accompagne pour adapter votre
+                couverture aux évolutions géopolitiques et sécuriser vos
+                opérations maritimes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 3: Cyberattaques -->
+      <div x-data="{ open: false }">
+        <a href="#" @click.prevent="open = !open">
+          <img
+            src="/static/img/construction.jpg"
+            class="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover"
+          />
+        </a>
+        <div class="bg-gray-50 p-8">
+          <div class="text-xs text-gray-600 uppercase font-semibold">
+            Cybersécurité
+          </div>
+          <h2
+            class="mt-3 text-3xl mb-6 font-display text-black leading-tight max-w-sm"
+          >
+            Protection contre les Cyberattaques
+          </h2>
+          <p class="mt-4 max-w-md">
+            Face à la recrudescence des cyberattaques, protégez votre entreprise
+            avec nos solutions d'assurance cyber adaptées aux risques numériques
+            actuels.
+          </p>
+          <button
+            @click="open = !open"
+            class="flex items-center mt-6 uppercase text-sm text-black font-semibold"
+          >
+            <span x-text="open ? 'Voir moins' : 'En savoir plus'"></span>
+            <svg
+              class="w-4 h-4 ml-2 transform transition-transform duration-200"
+              :class="{'rotate-180': open}"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Contenu détaillé -->
+          <div x-show="open" x-transition class="mt-6 border-t pt-6">
+            <h3 class="font-bold text-xl mb-4">Notre protection couvre :</h3>
+            <ul class="list-disc pl-5 space-y-3">
+              <li>Pertes financières liées aux cyberattaques</li>
+              <li>Protection des données sensibles</li>
+              <li>Assistance technique en cas d'incident</li>
+              <li>Couverture des frais de restauration</li>
+            </ul>
+
+            <div class="mt-6 bg-adsblue bg-opacity-10 p-4 rounded-lg">
+              <p class="text-adsblue font-semibold">
+                Contactez-nous pour une évaluation personnalisée de vos besoins
+                en cybersécurité.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 4: Assurances Climatiques -->
+      <div x-data="{ open: false }">
+        <a href="#" @click.prevent="open = !open">
+          <img
+            src="/static/img/office.jpg"
+            class="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover"
+          />
+        </a>
+        <div class="bg-gray-50 p-8">
+          <div class="text-xs text-gray-600 uppercase font-semibold">
+            Climat
+          </div>
+          <h2
+            class="mt-3 text-3xl mb-6 font-display text-black leading-tight max-w-sm"
+          >
+            Assurances face aux Catastrophes Naturelles
+          </h2>
+          <p class="mt-4 max-w-md">
+            L'intensification des événements climatiques nécessite une
+            protection renforcée contre les catastrophes naturelles.
+          </p>
+          <button
+            @click="open = !open"
+            class="flex items-center mt-6 uppercase text-sm text-black font-semibold"
+          >
+            <span x-text="open ? 'Voir moins' : 'En savoir plus'"></span>
+            <svg
+              class="w-4 h-4 ml-2 transform transition-transform duration-200"
+              :class="{'rotate-180': open}"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Contenu détaillé -->
+          <div x-show="open" x-transition class="mt-6 border-t pt-6">
+            <h3 class="font-bold text-xl mb-4">Couvertures proposées :</h3>
+            <ul class="list-disc pl-5 space-y-3">
+              <li>Protection contre les inondations</li>
+              <li>Couverture des dommages dus aux incendies</li>
+              <li>Assurance tempête et catastrophes naturelles</li>
+              <li>Accompagnement dans les démarches préventives</li>
+            </ul>
+
+            <div class="mt-6 bg-adsblue bg-opacity-10 p-4 rounded-lg">
+              <p class="text-adsblue font-semibold">
+                Protégez vos biens contre les aléas climatiques avec nos
+                solutions d'assurance adaptées.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 5: Assurance Santé PME -->
+      <div x-data="{ open: false }">
+        <a href="#" @click.prevent="open = !open">
+          <img
+            src="/static/img/partenariat.jpg"
+            class="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover"
+          />
+        </a>
+        <div class="bg-gray-50 p-8">
+          <div class="text-xs text-gray-600 uppercase font-semibold">
+            Santé & Bien-être
+          </div>
+          <h2
+            class="mt-3 text-3xl mb-6 font-display text-black leading-tight max-w-sm"
+          >
+            Assurance Santé pour les PME
+          </h2>
+          <p class="mt-4 max-w-md">
+            Dans un contexte où le bien-être des employés est primordial, une
+            assurance santé attractive devient un véritable avantage
+            concurrentiel pour votre entreprise.
+          </p>
+          <button
+            @click="open = !open"
+            class="flex items-center mt-6 uppercase text-sm text-black font-semibold"
+          >
+            <span x-text="open ? 'Voir moins' : 'En savoir plus'"></span>
+            <svg
+              class="w-4 h-4 ml-2 transform transition-transform duration-200"
+              :class="{'rotate-180': open}"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Contenu détaillé -->
+          <div x-show="open" x-transition class="mt-6 border-t pt-6">
+            <h3 class="font-bold text-xl mb-4">
+              Avantages pour votre entreprise :
+            </h3>
+            <ul class="list-disc pl-5 space-y-3">
+              <li>Attraction et rétention des talents</li>
+              <li>Amélioration du bien-être des employés</li>
+              <li>Réduction de l'absentéisme</li>
+              <li>Avantage fiscal pour l'entreprise</li>
+            </ul>
+
+            <h3 class="font-bold text-xl mt-6 mb-4">Notre offre comprend :</h3>
+            <ul class="list-disc pl-5 space-y-3">
+              <li>Couverture médicale complète</li>
+              <li>Options dentaires et optiques</li>
+              <li>Programmes de prévention santé</li>
+              <li>Assistance et support 24/7</li>
+            </ul>
+
+            <div class="mt-6 bg-adsblue bg-opacity-10 p-4 rounded-lg">
+              <p class="text-adsblue font-semibold">
+                Investissez dans le bien-être de vos employés avec nos solutions
+                d'assurance santé sur mesure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 6: Déclaration Sinistre -->
+      <div x-data="{ open: false }">
+        <a href="#" @click.prevent="open = !open">
+          <img
+            src="/static/img/guichet unique.jpeg"
+            class="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover"
+          />
+        </a>
+        <div class="bg-gray-50 p-8">
+          <div class="text-xs text-gray-600 uppercase font-semibold">
+            Assistance Sinistre
+          </div>
+          <h2
+            class="mt-3 text-3xl mb-6 font-display text-black leading-tight max-w-sm"
+          >
+            Déclaration et Gestion des Sinistres
+          </h2>
+          <p class="mt-4 max-w-md">
+            Un accompagnement pas à pas dans la déclaration et le suivi de vos
+            sinistres pour une indemnisation rapide et optimale.
+          </p>
+          <button
+            @click="open = !open"
+            class="flex items-center mt-6 uppercase text-sm text-black font-semibold"
+          >
+            <span x-text="open ? 'Voir moins' : 'En savoir plus'"></span>
+            <svg
+              class="w-4 h-4 ml-2 transform transition-transform duration-200"
+              :class="{'rotate-180': open}"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Contenu détaillé -->
+          <div x-show="open" x-transition class="mt-6 border-t pt-6">
+            <h3 class="font-bold text-xl mb-4">Étapes essentielles :</h3>
+            <ol class="list-decimal pl-5 space-y-3">
+              <li>
+                <strong>Déclaration rapide et sécurité des lieux</strong>
+                <ul class="list-disc pl-5 mt-2">
+                  <li>
+                    Respectez les délais de déclaration (ex: 48h pour un vol)
+                  </li>
+                  <li>Sécurisez les lieux et prenez des photos</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Collecte des documents</strong>
+                <ul class="list-disc pl-5 mt-2">
+                  <li>Constat d'accident</li>
+                  <li>Documents du véhicule</li>
+                  <li>Photos des dommages</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Suivi et collaboration</strong>
+                <ul class="list-disc pl-5 mt-2">
+                  <li>Communication régulière avec l'assureur</li>
+                  <li>Fourniture rapide des documents demandés</li>
+                </ul>
+              </li>
+            </ol>
+
+            <div class="mt-6 bg-adsblue bg-opacity-10 p-4 rounded-lg">
+              <p class="text-adsblue font-semibold">
+                Notre équipe vous accompagne à chaque étape pour une gestion
+                efficace de votre sinistre.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 7: Secteurs d'Expertise -->
+      <div x-data="{ open: false }">
+        <a href="#" @click.prevent="open = !open">
+          <img
+            src="/static/img/swiper3.jpg"
+            class="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover"
+          />
+        </a>
+        <div class="bg-gray-50 p-8">
+          <div class="text-xs text-gray-600 uppercase font-semibold">
+            Expertise Sectorielle
+          </div>
+          <h2
+            class="mt-3 text-3xl mb-6 font-display text-black leading-tight max-w-sm"
+          >
+            Nos Secteurs d'Expertise
+          </h2>
+          <p class="mt-4 max-w-md">
+            Une expertise pointue dans des secteurs clés, avec des solutions
+            adaptées à chaque domaine d'activité.
+          </p>
+          <button
+            @click="open = !open"
+            class="flex items-center mt-6 uppercase text-sm text-black font-semibold"
+          >
+            <span x-text="open ? 'Voir moins' : 'En savoir plus'"></span>
+            <svg
+              class="w-4 h-4 ml-2 transform transition-transform duration-200"
+              :class="{'rotate-180': open}"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Contenu détaillé -->
+          <div x-show="open" x-transition class="mt-6 border-t pt-6">
+            <div class="space-y-6">
+              <div>
+                <h3 class="font-bold text-xl mb-3">
+                  🔹 Industrie Minière et Pétrolière
+                </h3>
+                <p>
+                  Solutions de prévention et gestion des risques sur mesure,
+                  adaptées aux risques complexes du secteur.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-xl mb-3">🔹 BTP et Construction</h3>
+                <p>
+                  Protection des chantiers contre les imprévus avec un suivi
+                  constant pour une exécution sans interruption.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-xl mb-3">
+                  🔹 Logistique et Transport
+                </h3>
+                <p>
+                  Garanties robustes pour votre flotte et vos marchandises, avec
+                  une réponse rapide aux imprévus.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-xl mb-3">
+                  🔹 Institutions Financières
+                </h3>
+                <p>
+                  Solutions personnalisées pour la gestion des risques
+                  financiers, conformes aux normes réglementaires.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-xl mb-3">🔹 Monde Agricole</h3>
+                <p>
+                  Protection contre les risques climatiques et imprévus
+                  agricoles, pour une résilience accrue de vos exploitations.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-6 bg-adsblue bg-opacity-10 p-4 rounded-lg">
+              <p class="text-adsblue font-semibold">
+                Contactez-nous pour une solution adaptée à votre secteur
+                d'activité.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 8: Nos Domaines de Compétences -->
+      <div x-data="{ open: false }">
+        <a href="#" @click.prevent="open = !open">
+          <img
+            src="/static/img/Home_ADS.jpg"
+            class="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover"
+          />
+        </a>
+        <div class="bg-gray-50 p-8">
+          <div class="text-xs text-gray-600 uppercase font-semibold">
+            Nos Compétences
+          </div>
+          <h2
+            class="mt-3 text-3xl mb-6 font-display text-black leading-tight max-w-sm"
+          >
+            Nos Domaines de Compétences
+          </h2>
+          <p class="mt-4 max-w-md">
+            Une protection complète et personnalisée grâce à notre expertise
+            diversifiée.
+          </p>
+          <button
+            @click="open = !open"
+            class="flex items-center mt-6 uppercase text-sm text-black font-semibold"
+          >
+            <span x-text="open ? 'Voir moins' : 'En savoir plus'"></span>
+            <svg
+              class="w-4 h-4 ml-2 transform transition-transform duration-200"
+              :class="{'rotate-180': open}"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Contenu détaillé -->
+          <div x-show="open" x-transition class="mt-6 border-t pt-6">
+            <div class="space-y-6">
+              <div>
+                <h3 class="font-bold text-xl mb-3">
+                  🔹 Conseil et Intermédiation
+                </h3>
+                <p>
+                  Sélection des assurances adaptées et négociation des
+                  meilleures conditions auprès des compagnies.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-xl mb-3">
+                  🔹 Audit des Contrats d'Assurance
+                </h3>
+                <p>
+                  Analyse approfondie de vos contrats pour optimiser votre
+                  couverture et détecter les lacunes.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-xl mb-3">
+                  🔹 Gestion des Polices d'Assurance
+                </h3>
+                <p>
+                  Suivi complet des échéances, renouvellements et ajustements de
+                  vos contrats.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-xl mb-3">🔹 Assistance Sinistre</h3>
+                <p>
+                  Accompagnement personnalisé pour une indemnisation rapide et
+                  efficace.
+                </p>
+              </div>
+            </div>
+
+            <h3 class="font-bold text-xl mt-6 mb-4">Nos avantages :</h3>
+            <ul class="list-disc pl-5 space-y-3">
+              <li>Offres optimisées et compétitives</li>
+              <li>Accompagnement personnalisé</li>
+              <li>Réseau solide de partenaires</li>
+              <li>Assistance sinistre rapide</li>
+            </ul>
+
+            <div class="mt-6 bg-adsblue bg-opacity-10 p-4 rounded-lg">
+              <p class="text-adsblue font-semibold">
+                Faites confiance à notre expertise pour une couverture sur
+                mesure de vos risques.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div
+      class="bg-adsblue text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 px-12"
+    >
+      <div
+        class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 text-center lg:text-left py-24"
+      >
+        <!-- Footer Column 1: Logo -->
+        <div>
+          <div class="text-white opacity-50 text-4xl font-display">
+            <img
+              src="/static/img/logo-blanc.png"
+              class="h-20 w-64 object-contain object-center"
+            />
+          </div>
+        </div>
+
+        <!-- Footer Column 2: More Info -->
+        <div>
+          <div
+            class="font-display text-white uppercase text-sm tracking-widest mb-6"
+          >
+            Plus d'infos
+          </div>
+          <a href="#" class="block mb-4">À propos</a>
+          <a href="#" class="block mb-4">Informations</a>
+          <a href="#" class="block mb-4">FAQ</a>
+        </div>
+
+        <!-- Footer Column 3: Useful Links -->
+        <div>
+          <div
+            class="font-display text-white uppercase text-sm tracking-widest mb-6"
+          >
+            Liens utiles
+          </div>
+          <a href="#" class="block mb-4">À propos</a>
+          <a href="#" class="block mb-4">Informations</a>
+          <a href="#" class="block mb-4">FAQ</a>
+        </div>
+
+        <!-- Footer Column 4: Learn More -->
+        <div>
+          <div
+            class="font-display text-white uppercase text-sm tracking-widest mb-6"
+          >
+            En savoir plus
+          </div>
+          <a href="#" class="block mb-4">À propos</a>
+          <a href="#" class="block mb-4">Informations</a>
+          <a href="#" class="block mb-4">FAQ</a>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div
+        class="text-sm lg:text-base text-center font-heading font-light tracking-widest uppercase text-white opacity-75 pb-24"
+      >
+        ©2024 DESIGN PAR African Digit Consulting.
+      </div>
+    </div>
+
+    <!-- Alpine.js Script -->
+    <script src="/static/js/alpine.js"></script>
+  </body>
+</html>
